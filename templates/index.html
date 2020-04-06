@@ -1,0 +1,26 @@
+{% extends "base/base.html" %}
+{% block navbar %}
+{{super()}}
+{%- endblock navbar %}
+{% block sidebar %}
+{{super()}}
+{%- endblock sidebar %}
+{% block content_header -%}
+<div class="jumbotron">
+    <h1>Course Catalog Demo</h1>
+</div>
+{%- endblock content_header %}
+{% block content -%}
+<div class="container">
+    <h3>A Practical LAMP Stack Tutorial and Demo</h3>
+    <p class="text-danger">This is still a work in progress, so be patient.</p>
+    <p>This web application is a great introduction into setting up a LAMP Stack using Flask. Not only is it a good example, but it was developed to be used.</p>
+    <br>
+    <a class="btn btn-primary btn-lg" href="https://db.tannercrook.com/cit-225/lamp-stack-with-flask/">Tutorial</a>
+    <br>
+    <br>
+    <h2>About the Application</h2>
+    <p>The application is being built in response to COVID-19 complications and students need to be able to browse a course catalog to register remotely. While you could browse a document, that is not very friendly. The end result of this application will allow for CSV uploads for course catalogs from a SIS.</p>
+    <p>You can start now by going to the Schools page and browse the catalog for the fake high school. Current functionality allows for courses to be added with an online form.</p>
+</div>
+{%- endblock content %}

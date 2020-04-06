@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% block navbar %}
+{{super()}}
+{%- endblock navbar %}
+{% block sidebar %}
+{{super()}}
+{%- endblock sidebar %}
+{% block content_header -%}
+{%- endblock content_header %}
+{% block content -%}
+<div class="container">
+    {% for school in schools %}
+        <div class="card m-4 mb-4">
+            <h1 class="card-header">{{school.name}}</h1>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>View {{school.abbreviation}}'s Course Catalogs</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-primary btn-lg" href="{{url_for('school.schoolCatalogs', school_id=school.school_id)}}">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="container">
+        <br>
+        <br>
+    </div>
+</div>
+{%- endblock content %}
